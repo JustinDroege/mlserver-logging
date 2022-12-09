@@ -1,0 +1,4 @@
+{
+    "name": "logger-model",
+    "implementation": "models.CustomModel"
+}

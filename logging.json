@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "disable_existing_loggers": false,
+  "formatters": {
+    "json": {
+      "class": "pythonjsonlogger.jsonlogger.JsonFormatter",
+      "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+    }
+  },
+  "handlers": {
+    "console": {
+      "class": "logging.StreamHandler",
+      "level": "DEBUG",
+      "formatter": "json",
+      "stream": "ext://sys.stdout"
+    },
+    "error_console": {
+      "level": "DEBUG",
+      "class": "logging.StreamHandler",
+      "formatter": "json",
+      "stream": "ext://sys.stdout"
+    }
+  },
+  "loggers": {
+    "mlserver": {
+      "level": "DEBUG",
+      "handlers": ["console"],
+      "propagate": "no"
+    },
+    "uvicorn": {
+      "level": "DEBUG",
+      "handlers": ["console"],
+      "propagate": "no"
+    }
+  },
+  "root": {
+    "level": "DEBUG",
+    "handlers": ["console"],
+    "propagate": "no"
+  }
+}

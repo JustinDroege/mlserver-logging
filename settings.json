@@ -1,0 +1,6 @@
+{
+    "debug": "true",
+    "http_port": 8123,
+    "grpc_port": 8234,
+    "logging_settings": "logging.json"
+}
